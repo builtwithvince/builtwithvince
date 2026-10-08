@@ -156,11 +156,14 @@ const aspectOf = (name) => {
 const SIZE = 28; // sentence type size
 const H = 58; // every segment image is this tall so lines align
 const BASE = 39; // shared baseline
-const PAD = 3; // per side; plus the HTML space between images ≈ a word space
+// Word spacing is baked into the images (PAD a side) rather than left to the
+// HTML space between them: a space is 4px of GitHub's 16px body text at every
+// width, so it would not scale down with the percentage-sized images below.
+const PAD = 5;
 const CHIP_Y = 7, CHIP_H = 44;
 
 function word(text, theme, hug) {
-  const left = hug ? 1 : PAD;
+  const left = hug ? 0 : PAD;
   const w = Math.ceil(width(BODY, text, SIZE)) + left + PAD;
   const d = pathOf(BODY, text, SIZE, left, BASE);
   return { w, svg: svg(w, H, `<path fill="${THEMES[theme].text}" d="${d}"/>`, { title: text }) };
@@ -365,9 +368,8 @@ const picture = (base, alt, size) =>
 let wm;
 for (const theme of THEME_NAMES) put(`wordmark-${theme}.svg`, (wm = wordmark(theme)).svg);
 
-const lines = SENTENCE.map((line, li) => {
-  let html = "", lineW = 0;
-  line.forEach((seg, si) => {
+const segs = SENTENCE.map((line, li) =>
+  line.map((seg, si) => {
     const base = `s/${li}-${si}`;
     let out;
     for (const theme of THEME_NAMES) {
@@ -379,25 +381,34 @@ const lines = SENTENCE.map((line, li) => {
       put(`${base}-${theme}.svg`, out.svg);
     }
     const alt = typeof seg === "string" ? seg : seg.text ?? seg.alt ?? seg.label;
-    const tag = `<a href="${seg.href ?? SITE}">${picture(base, alt, `width="${out.w}" height="${H}"`)}</a>`;
-    html += (si === 0 || seg.hug ? "" : "\n") + tag;
-    lineW += out.w + (seg.hug ? 0 : 4);
-  });
-  console.log(`line ${li + 1}: ~${lineW}px`);
-  return html;
+    return { seg, base, alt, w: out.w };
+  }),
+);
+
+// Everything above the stack board is sized in % of the README column, so the
+// sentence and wordmark shrink together on a phone instead of wrapping word by
+// word. The widest line fills FILL of the column; the rest keep its scale.
+const FILL = 0.96;
+const REF = Math.max(...segs.map((l) => l.reduce((n, s) => n + s.w, 0))) / FILL;
+const pct = (w) => `width="${((w / REF) * 100).toFixed(2)}%"`;
+
+// No whitespace between a line's images: any space would add unscaled width.
+const lines = segs.map((line, li) => {
+  console.log(`line ${li + 1}: ${line.reduce((n, s) => n + s.w, 0)} / ${Math.round(REF)} units`);
+  return line.map(({ seg, base, alt, w }) => `<a href="${seg.href ?? SITE}">${picture(base, alt, pct(w))}</a>`).join("");
 });
 
 let st;
 for (const theme of THEME_NAMES) put(`stack-${theme}.svg`, (st = stack(theme)).svg);
 
 const readme = `<p align="center">
-<a href="${SITE}">${picture("wordmark", WORDMARK, `width="${wm.w}" height="${wm.h}"`)}</a>
+<a href="${SITE}">${picture("wordmark", WORDMARK, pct(wm.w))}</a>
 </p>
 
 <br>
 
 <p align="center">
-${lines.join("\n<br>\n")}
+${lines.join("<br>\n")}
 </p>
 
 <br>
