@@ -1,10 +1,36 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/profile-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/profile-light.svg">
-  <img alt="Built With Vince. A split-flap board cycles: Your missing piece isn't another tool. Isn't another hire. It's the system between them. Built With Vince — systems that hold. Builds: AI solutions, Claude Code setups, MVPs and custom builds. Runs on: HighLevel, n8n, Claude, Supabase, Cloudflare, Railway. Serves: founders and agencies worldwide, async-first from the Philippines." src="./assets/profile-light.svg" width="100%">
-</picture>
+<p align="center">
+<a href="https://www.builtwithvince.com"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/wordmark-dark.svg"><img src="./assets/wordmark-light.svg" alt="Built With Vince" width="397" height="97"></picture></a>
+</p>
+
+<br>
 
 <p align="center">
-  <a href="https://www.builtwithvince.com"><b>builtwithvince.com</b></a> ·
-  <a href="https://www.linkedin.com/in/vince-gerald-salvame-b1251518b">LinkedIn</a>
+<a href="https://www.builtwithvince.com"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/s/0-0-dark.svg"><img src="./assets/s/0-0-light.svg" alt="Your" width="63" height="58"></picture></a>
+<a href="https://www.builtwithvince.com"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/s/0-1-dark.svg"><img src="./assets/s/0-1-light.svg" alt="missing" width="105" height="58"></picture></a>
+<a href="https://www.builtwithvince.com"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/s/0-2-dark.svg"><img src="./assets/s/0-2-light.svg" alt="piece" width="74" height="58"></picture></a>
+<a href="https://www.builtwithvince.com"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/s/0-3-dark.svg"><img src="./assets/s/0-3-light.svg" alt="isn't" width="58" height="58"></picture></a>
+<a href="https://www.builtwithvince.com/#services"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/s/0-4-dark.svg"><img src="./assets/s/0-4-light.svg" alt="another tool" width="289" height="58"></picture></a><a href="https://www.builtwithvince.com"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/s/0-5-dark.svg"><img src="./assets/s/0-5-light.svg" alt="." width="11" height="58"></picture></a>
+<br>
+<a href="https://www.builtwithvince.com"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/s/1-0-dark.svg"><img src="./assets/s/1-0-light.svg" alt="It's" width="47" height="58"></picture></a>
+<a href="https://www.builtwithvince.com"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/s/1-1-dark.svg"><img src="./assets/s/1-1-light.svg" alt="the" width="47" height="58"></picture></a>
+<a href="https://www.builtwithvince.com/case-studies"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/s/1-2-dark.svg"><img src="./assets/s/1-2-light.svg" alt="system" width="163" height="58"></picture></a>
+<a href="https://www.builtwithvince.com"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/s/1-3-dark.svg"><img src="./assets/s/1-3-light.svg" alt="between" width="114" height="58"></picture></a>
+<a href="https://www.builtwithvince.com/ghl"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/s/1-4-dark.svg"><img src="./assets/s/1-4-light.svg" alt="HighLevel" width="200" height="58"></picture></a><a href="https://www.builtwithvince.com"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/s/1-5-dark.svg"><img src="./assets/s/1-5-light.svg" alt="," width="11" height="58"></picture></a>
+<br>
+<a href="https://www.builtwithvince.com/#services"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/s/2-0-dark.svg"><img src="./assets/s/2-0-light.svg" alt="n8n" width="123" height="58"></picture></a>
+<a href="https://www.builtwithvince.com"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/s/2-1-dark.svg"><img src="./assets/s/2-1-light.svg" alt="and" width="53" height="58"></picture></a>
+<a href="https://www.builtwithvince.com/code-with-claude"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/s/2-2-dark.svg"><img src="./assets/s/2-2-light.svg" alt="Claude" width="163" height="58"></picture></a><a href="https://www.builtwithvince.com"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/s/2-3-dark.svg"><img src="./assets/s/2-3-light.svg" alt="." width="11" height="58"></picture></a>
+</p>
+
+<br>
+
+<p align="center">
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/stack-dark.svg"><img src="./assets/stack-light.svg" alt="Tools &amp; stack: Salesforce, Make, Zapier, n8n, Cloudflare, Claude, Codex, Claude Code, HighLevel, Gemini, GitHub, Monday.com, Namecheap, Notion, Zoho, OpenAI, Postman, Railway, Supabase, Paper, Tailwind CSS, TypeScript, v0, Vercel, Figma, VS Code, GSAP, Apple Developer Program, REST API, Clay" width="100%"></picture>
+</p>
+
+<p align="center">
+<a href="https://www.builtwithvince.com"><b>builtwithvince.com</b></a> ·
+<a href="https://www.builtwithvince.com/case-studies">Case studies</a> ·
+<a href="https://www.builtwithvince.com/blog">Blog</a> ·
+<a href="https://www.linkedin.com/in/vince-gerald-salvame-b1251518b">LinkedIn</a>
 </p>
