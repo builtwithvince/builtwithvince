@@ -168,22 +168,22 @@ function word(text, theme, hug) {
 
 function chip({ label, icon }, theme) {
   const p = THEMES[theme];
-  const ICON = 44, GAP = 8, RIGHT = 16;
+  const ICON = 32, GAP = 8, RIGHT = 16, INSET = 8;
   const lw = width(BODY, label, SIZE);
-  const w = Math.ceil(PAD + ICON + GAP + lw + RIGHT + PAD);
+  const w = Math.ceil(PAD + INSET + ICON + GAP + lw + RIGHT + PAD);
   const bg = `<rect x="${PAD}" y="${CHIP_Y}" width="${w - 2 * PAD}" height="${CHIP_H}" rx="14" fill="${p.chip}"/>`;
-  const ix = PAD - 2, iy = (H - ICON) / 2;
+  const ix = PAD + INSET, iy = (H - ICON) / 2;
   let art;
   if (icon.raster) {
-    art = `<image x="${ix}" y="${iy - 2}" width="${ICON + 4}" height="${ICON + 4}" preserveAspectRatio="xMidYMid meet" href="data:${mime(icon.raster)};base64,${b64(icon.raster)}" transform="rotate(-8 ${ix + ICON / 2} ${iy + ICON / 2})"/>`;
+    art = `<image x="${ix - 1}" y="${iy}" width="${ICON - 2}" height="${ICON}" preserveAspectRatio="xMidYMid meet" href="data:${mime(icon.raster)};base64,${b64(icon.raster)}" transform="rotate(-8 ${ix + ICON / 2} ${iy + ICON / 2})"/>`;
   } else {
     // An app-icon tile, tilted like the reference's.
-    const T = 38, tx = ix + (ICON - T) / 2, ty = (H - T) / 2, m = 7;
+    const T = 28, tx = ix + (ICON - T) / 2, ty = (H - T) / 2, m = 5;
     art =
-      `<g transform="rotate(-8 ${tx + T / 2} ${ty + T / 2})" filter="url(#sh)"><rect x="${tx}" y="${ty}" width="${T}" height="${T}" rx="10" fill="#FFFFFF"/>` +
+      `<g transform="rotate(-8 ${tx + T / 2} ${ty + T / 2})" filter="url(#sh)"><rect x="${tx}" y="${ty}" width="${T}" height="${T}" rx="8" fill="#FFFFFF"/>` +
       `<g style="color:#2A1F17">${logoSvg(icon.logo, true, { x: tx + m, y: ty + m, w: T - 2 * m, h: T - 2 * m, viewBox: icon.crop })}</g></g>`;
   }
-  const text = `<path fill="${p.text}" d="${pathOf(BODY, label, SIZE, PAD + ICON + GAP, BASE)}"/>`;
+  const text = `<path fill="${p.text}" d="${pathOf(BODY, label, SIZE, PAD + INSET + ICON + GAP, BASE)}"/>`;
   const defs = `<defs><filter id="sh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.25"/></filter></defs>`;
   return { w, svg: svg(w, H, defs + bg + art + text, { title: label }) };
 }

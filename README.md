@@ -13,13 +13,13 @@
 <br>
 <a href="https://www.builtwithvince.com"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/s/1-0-dark.svg"><img src="./assets/s/1-0-light.svg" alt="It's" width="47" height="58"></picture></a>
 <a href="https://www.builtwithvince.com"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/s/1-1-dark.svg"><img src="./assets/s/1-1-light.svg" alt="the" width="47" height="58"></picture></a>
-<a href="https://www.builtwithvince.com/case-studies"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/s/1-2-dark.svg"><img src="./assets/s/1-2-light.svg" alt="system" width="163" height="58"></picture></a>
+<a href="https://www.builtwithvince.com/case-studies"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/s/1-2-dark.svg"><img src="./assets/s/1-2-light.svg" alt="system" width="159" height="58"></picture></a>
 <a href="https://www.builtwithvince.com"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/s/1-3-dark.svg"><img src="./assets/s/1-3-light.svg" alt="between" width="114" height="58"></picture></a>
-<a href="https://www.builtwithvince.com/ghl"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/s/1-4-dark.svg"><img src="./assets/s/1-4-light.svg" alt="HighLevel" width="200" height="58"></picture></a><a href="https://www.builtwithvince.com"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/s/1-5-dark.svg"><img src="./assets/s/1-5-light.svg" alt="," width="11" height="58"></picture></a>
+<a href="https://www.builtwithvince.com/ghl"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/s/1-4-dark.svg"><img src="./assets/s/1-4-light.svg" alt="HighLevel" width="196" height="58"></picture></a><a href="https://www.builtwithvince.com"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/s/1-5-dark.svg"><img src="./assets/s/1-5-light.svg" alt="," width="11" height="58"></picture></a>
 <br>
-<a href="https://www.builtwithvince.com/#services"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/s/2-0-dark.svg"><img src="./assets/s/2-0-light.svg" alt="n8n" width="123" height="58"></picture></a>
+<a href="https://www.builtwithvince.com/#services"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/s/2-0-dark.svg"><img src="./assets/s/2-0-light.svg" alt="n8n" width="119" height="58"></picture></a>
 <a href="https://www.builtwithvince.com"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/s/2-1-dark.svg"><img src="./assets/s/2-1-light.svg" alt="and" width="53" height="58"></picture></a>
-<a href="https://www.builtwithvince.com/code-with-claude"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/s/2-2-dark.svg"><img src="./assets/s/2-2-light.svg" alt="Claude" width="163" height="58"></picture></a><a href="https://www.builtwithvince.com"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/s/2-3-dark.svg"><img src="./assets/s/2-3-light.svg" alt="." width="11" height="58"></picture></a>
+<a href="https://www.builtwithvince.com/code-with-claude"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/s/2-2-dark.svg"><img src="./assets/s/2-2-light.svg" alt="Claude" width="159" height="58"></picture></a><a href="https://www.builtwithvince.com"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/s/2-3-dark.svg"><img src="./assets/s/2-3-light.svg" alt="." width="11" height="58"></picture></a>
 </p>
 
 <br>
