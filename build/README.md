@@ -8,8 +8,9 @@ either; edit `build/build.mjs` and rebuild. Commit the output.
 
 - **`SENTENCE`** — one array per desktop line. A string is a word; an object is a
   chip (`label` + `icon` + `href`), the split-flap chip (`flap` faces), or
-  punctuation (`text`, `hug: true`). Keep each line under ~640px — the build prints
-  widths; GitHub's profile column is ~650px at common laptop sizes.
+  punctuation (`text`, `hug: true`). Lines never wrap: the widest one fills `FILL`
+  (96%) of the column and sets the scale for everything above the stack board, so
+  a much longer line shrinks all the type. The build prints each line's width.
 - **`SLOTS`** — the tech-stack board. Mirrors `LOGO_SLOTS` in the site's
   `TechStackMarquee.tsx`; timings are its GSAP timeline converted to CSS keyframes.
   Every slot must hold exactly 5 logos.
@@ -19,8 +20,12 @@ either; edit `build/build.mjs` and rebuild. Commit the output.
 
 - **GitHub can't run anything in a README.** Images go through its camo proxy as
   `<img>`: no JS, no hover, no external fonts. The only interaction is links, so
-  every word and chip is its own linked image — and as separate images the sentence
-  wraps like text on a phone.
+  every word and chip is its own linked image.
+- **Sizes are % of the column, not px.** Fixed-px images wrapped word by word on a
+  phone (293px column vs 831px desktop) while the wordmark and stack board shrank.
+  Percent widths scale the whole composition as one. Word spacing is baked into each
+  image's padding and the HTML has no whitespace between them, because a space is a
+  fixed 4px that would not scale.
 - **Type is vector paths** (opentype.js from Google's TrueType), so nothing depends
   on font loading. Stack Sans Headline: wordmark + flap tiles. Atkinson Hyperlegible
   Next: sentence. Atkinson Hyperlegible Mono: the stack label.
